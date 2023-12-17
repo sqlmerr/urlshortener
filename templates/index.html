@@ -11,8 +11,21 @@
   </header>
   <main>
     <p>Enter your link below and click the button to shorten it:</p>
-    <input type="text" placeholder="Paste your link here">
-    <button>Shorten</button>
+    <input id="inputField" type="text" placeholder="Paste your link here">
+    <button id="shortenButton">Shorten</button>
   </main>
+
+  <p id="shorten">
+    {{ shorten }}
+  </p>
 </body>
+<script>
+    document.getElementById('shortenButton').addEventListener('click', function() {
+        var inputValue = document.getElementById('inputField').value;
+        if (inputValue !== '') {
+          var currentURL = window.location.href.split('?')[0];
+          window.location.href = `${currentURL}?url=${inputValue}`;
+        }
+    });
+</script>
 </html>
