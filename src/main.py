@@ -6,7 +6,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 app = FastAPI(
-    version="0.0.1"
+    version="0.1"
 )
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
