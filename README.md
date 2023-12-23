@@ -1,5 +1,5 @@
 # urlshortener
-Just a URL shortener with database MongoDB
+Just an URL shortener with database MongoDB
 
 
 # Run
